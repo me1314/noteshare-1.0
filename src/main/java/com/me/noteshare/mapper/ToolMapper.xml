@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.ToolMapper">
+    <insert id="upload" parameterType="Tool" >
+        insert into ns_tools values(#{id},#{name},#{updateDate},#{type},#{size},#{description},#{url},#{am_id})
+    </insert>
+</mapper>

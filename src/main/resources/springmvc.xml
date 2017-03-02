@@ -12,10 +12,15 @@
     <!--如下两个文件必须在springmvc配置文件中-->
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.me.noteshare" />
-    <!--试图解析器-->
+    <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="5000000" />
+    </bean>
+
     <mvc:resources mapping="/resource/**" location="/resource/" />
 </beans>
