@@ -1,7 +1,9 @@
 package com.me.noteshare.controller;
 
+import org.apache.ibatis.javassist.compiler.MemberResolver;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Author Sunny
@@ -79,6 +81,11 @@ public class AdminControlller {
 
     @RequestMapping("/login")
     public String adminlogin() {
+        return "/admin/login";
+    }
+
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public String adminlogin(String user) {
         return "/admin/main";
     }
 }

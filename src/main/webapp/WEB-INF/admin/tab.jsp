@@ -49,52 +49,22 @@ $(document).ready(function(e) {
     
     <div class="itab">
   	<ul> 
-    <li><a href="#tab1" class="selected">发布通知</a></li> 
+    <li><a href="#tab1" class="selected">上传文章</a></li>
     <li><a href="#tab2">自定义</a></li> 
   	</ul>
     </div> 
     
   	<div id="tab1" class="tabson">
     
-    <div class="formtext">Hi，<b>admin</b>，欢迎您试用信息发布功能！</div>
+    <div class="formtext">Hi，<b>admin</b>，欢迎您上传文章功能！</div>
     
     <ul class="forminfo">
-    <li><label>招聘企业<b>*</b></label><input name="" type="text" class="dfinput" value="请填写单位名称"  style="width:518px;"/></li>
-   
-    <li><label>职位名称<b>*</b></label>  
-    
+    <li><label>标题<b>*</b></label><input name="" type="text" class="dfinput" placeholder="文章标题"  style="width:518px;"/></li>
 
-    <div class="vocation">
-    <select class="select1">
-    <option>UI设计师</option>
-    <option>交互设计师</option>
-    <option>前端设计师</option>
-    <option>网页设计师</option>
-    <option>Flash动画</option>
-    <option>视觉设计师</option>
-    <option>插画设计师</option>
-    <option>美工</option>
-    <option>其他</option>
-    </select>
-    </div>
-    
-    </li>
-    
-    <li><label>薪资待遇<b>*</b></label>
-    
-    <div class="vocation">
-    <select class="select1">
-    <option>3000-5000</option>
-    <option>5000-8000</option>
-    <option>8000-10000</option>
-    <option>10000-15000</option>
-    </select>
-    </div>
-    
-    
-    
-    </li>
-    <li><label>工作地点<b>*</b></label>
+        <li><label>作者<b>*</b></label><input name="" type="text" class="dfinput" placeholder="文章标题"  style="width:518px;"/></li>
+
+        <li><label>来源网站<b>*</b></label><input name="" type="text" class="dfinput" placeholder="文章标题"  style="width:518px;"/></li>
+    <li><label>文章类型<b>*</b></label>
     
     <div class="usercity">
     
@@ -123,7 +93,7 @@ $(document).ready(function(e) {
     
     
     </li>
-    <li><label>通知内容<b>*</b></label>
+    <li><label>文章内容<b>*</b></label>
     
 
     <textarea id="content7" name="content" style="width:700px;height:250px;visibility:hidden;"></textarea>

@@ -25,7 +25,7 @@
     <!--sqlSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
         <property name="dataSource" ref="dataSource" />
-        <property name="typeAliasesPackage" value="com.me.noteshare.po" />
+        <property name="typeAliasesPackage" value="com.me.noteshare.pojo" />
     </bean>
 
     <!--mapper扫描器-->

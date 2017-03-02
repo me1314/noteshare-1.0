@@ -30,7 +30,7 @@ $(function(){
     <li><a href="/admin/tab" target="rightFrame"><img src="${pageContext.request.contextPath}/resource/images/icon03.png" title="文章发布" /><h2>文章发布</h2></a></li>
     <li><a href="/admin/tools" target="rightFrame"><img src="${pageContext.request.contextPath}/resource/images/icon04.png" title="常用工具" /><h2>常用工具</h2></a></li>
     <li><a href="/admin/computer" target="rightFrame"><img src="${pageContext.request.contextPath}/resource/images/icon05.png" title="文件管理" /><h2>文件管理</h2></a></li>
-    <li><a href="#" target="rightFrame"><img src="${pageContext.request.contextPath}/resource/images/icon06.png" title="系统设置" /><h2>系统设置</h2></a></li>
+    <li><a href="javascript:void(0);" target="rightFrame"><img src="${pageContext.request.contextPath}/resource/images/icon06.png" title="系统设置" /><h2>系统设置</h2></a></li>
     </ul>
             
     <div class="topright">    
