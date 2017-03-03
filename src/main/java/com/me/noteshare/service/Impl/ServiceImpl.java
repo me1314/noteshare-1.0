@@ -6,6 +6,8 @@ import com.me.noteshare.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Author Sunny
  * Date 2017/2/27
@@ -19,5 +21,9 @@ public class ServiceImpl implements service {
 
     public void upload(Tool tool){
         toolDao.upload(tool);
+    }
+
+    public List<Tool> list() {
+        return toolDao.list();
     }
 }

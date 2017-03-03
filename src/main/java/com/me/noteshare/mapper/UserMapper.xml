@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.UserMapper">
+    <!--查询用户列表-->
+    <select id="list" resultMap="User">
+        select * from ns_user
+    </select>
+    <!--用户列表分页-->
+    <select id="pageList" parameterType="int" resultMap="User">
+        select * from ns_user limit #{pageIndex},#{pageSize}
+    </select>
+    <select id="count" resultType="int">
+        select count(*) from ns_user
+    </select>
+    <!--结果集Map映射-->
+    <resultMap id="User" type="User">
+        <result property="id" column="u_id" />
+        <result property="name" column="u_name" />
+        <result property="gender" column="u_gender" />
+        <result property="icon" column="u_icon" />
+        <result property="signature" column="u_signature" />
+        <result property="eMail" column="u_eMail" />
+        <result property="phone" column="u_phone" />
+        <result property="contact" column="u_contact" />
+        <result property="createDate" column="u_createDate" />
+        <result property="verified" column="u_verified" />
+    </resultMap>
+</mapper>

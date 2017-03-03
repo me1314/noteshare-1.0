@@ -34,10 +34,10 @@ public class AdminControlller {
         return "/admin/right";
     }
 
-    @RequestMapping("/imgtable")
+/*    @RequestMapping("/imgtable")
     public String imgtable() {
         return "/admin/imgtable";
-    }
+    }*/
 
     @RequestMapping("/form")
     public String form() {
@@ -59,10 +59,10 @@ public class AdminControlller {
         return "/admin/tools";
     }
 
-    @RequestMapping("/filelist")
+    /*@RequestMapping("/filelist")
     public String filelist() {
         return "/admin/filelist";
-    }
+    }*/
 
     @RequestMapping("/tab")
     public String tab() {

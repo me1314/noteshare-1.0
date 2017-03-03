@@ -4,6 +4,7 @@ import com.me.noteshare.pojo.po.Tool;
 import com.me.noteshare.service.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -45,6 +47,7 @@ public class UploadController {
         return "redirect:/admin/form";
     }*/
 
+//工具上传
     @RequestMapping(value = "/form",method = RequestMethod.POST)
     public String uploadTool(@RequestParam("files") MultipartFile files,@RequestParam() String file_description) throws IOException {
         Tool tool = new Tool();
@@ -58,7 +61,7 @@ public class UploadController {
                     new File("E:\\noteshare\\admin\\tools\\"+files.getOriginalFilename()));
             FileCopyUtils.copy(files.getInputStream(),fos);
             tool.setName(files.getOriginalFilename());
-            tool.setUpdateDate(new Date().toString());
+            tool.setUpdateDate(new Date());
             tool.setType(files.getOriginalFilename().substring(files.getOriginalFilename().length()-4));
             tool.setSize(files.getSize());
             tool.setDescription(file_description);
@@ -68,5 +71,13 @@ public class UploadController {
             msg = "文件上传成功 ！";
         }
         return "redirect:/admin/form";
+    }
+
+//    显示工具列表
+    @RequestMapping("/filelist")
+    public String list(Model model){
+        List<Tool> tools = serviceImpl.list();
+        model.addAttribute("tools",tools);
+        return "admin/filelist";
     }
 }

@@ -5,6 +5,8 @@ import com.me.noteshare.pojo.po.Tool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/3/2.
  */
@@ -15,5 +17,9 @@ public class ToolDao implements IToolDao {
 
     public void upload(Tool tool){
         toolMapper.upload(tool);
+    }
+
+    public List<Tool> list() {
+        return toolMapper.list();
     }
 }

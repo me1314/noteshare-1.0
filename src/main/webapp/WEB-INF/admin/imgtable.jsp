@@ -1,4 +1,9 @@
+<%@ page import="com.me.noteshare.pojo.po.User" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="userController" class="com.me.noteshare.controller.UserController" scope="page" />
+<jsp:useBean id="userServiceImpl" class="com.me.noteshare.service.Impl.UserServiceImpl" scope="page" />
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -39,6 +44,14 @@
 
 <body>
 
+<%--<%
+    int pageIndex = 1;
+    int pageSize =10;
+    int count = userServiceImpl.count();
+    int totalPage = count%pageSize==0?count/pageSize:count/pageSize+1;
+    List<User> list = userServiceImpl.list(pageIndex,pageSize);
+%>--%>
+
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
@@ -65,7 +78,7 @@
             <th>个性签名</th>
             <th>邮箱</th>
             <th>手机</th>
-            <th>微信&QQ</th>
+            <th>微信 | QQ</th>
             <th>注册时间</th>
             <th>用户名</th>
             <th>是否激活</th>
@@ -75,7 +88,52 @@
 
         <tbody>
 
-        <tr>
+        <c:forEach var="users" items="${users}">
+            <tr>
+                <td class="imgtd"><img src="${users.icon}"/></td>
+                <td><a href="#">${users.signature}</a></td>
+                <td>${users.eMail}</td>
+                <td>${users.phone}</td>
+                <td>
+                    <%--<p>微信：9594979595</p>
+                    <p>QQ：9594979595</p>--%>
+                    ${users.contact}
+                </td>
+                <td>${users.createDate}</td>
+                <td>${users.name}<p>ID: ${users.id}</p></td>
+                <td><i>${users.verified}</i></td>
+                <td>${users.gender}</td>
+            </tr>
+        </c:forEach>
+
+<%--        <c:forEach var="users" items="list">
+            <tr>
+                <td class="imgtd"><img src="${users.icon}"/></td>
+                <td><a href="#">${users.signature}</a></td>
+                <td>${users.eMail}</td>
+                <td>${users.phone}</td>
+                <td>
+                   &lt;%&ndash;&lt;%&ndash;<p>微信：9594979595</p>
+                   <p>QQ：9594979595</p>&ndash;%&gt;&ndash;%&gt;
+                        ${users.contact}
+                </td>
+                <td>${users.createDate}</td>
+                <td>${users.name}<p>ID: ${users.id}</p></td>
+                <td><i>${users.verified}</i></td>
+                <td>${users.gender}</td>
+            </tr>
+</c:forEach>
+
+
+
+        <center>
+            <a href="/admin/imgtable/1">首页</a>
+            <a href="/admin/imgtable/${pageIndex-1}>">上一页</a>
+            <a href="/admin/imgtable/${pageIndex+1}">下一页</a>
+            <a href="/admin/imgtable/${totalPage}">末页</a>
+        </center>--%>
+
+<%--        <tr>
             <td class="imgtd"><img src="${pageContext.request.contextPath}/resource/images/img11.png"/></td>
             <td><a href="#">完美的人生</a></td>
             <td>934fd@qq.com</td>
@@ -148,7 +206,8 @@
             <td>admin<p>ID: 82122</p></td>
             <td>激活</td>
             <td>女</td>
-        </tr>
+        </tr>--%>
+
 
         </tbody>
 

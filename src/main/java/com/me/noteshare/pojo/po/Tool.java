@@ -8,7 +8,7 @@ import java.util.Date;
 public class Tool {
     private int id;
     private String name;
-    private String updateDate;
+    private Date updateDate;
     private String type;
     private long size;
     private String description;
@@ -18,7 +18,7 @@ public class Tool {
     public Tool() {
     }
 
-    public Tool(String name, String updateDate, String type, long size,String description, String url) {
+    public Tool(String name, Date updateDate, String type, long size,String description, String url) {
         this.name = name;
         this.updateDate = updateDate;
         this.type = type;
@@ -43,11 +43,11 @@ public class Tool {
         this.name = name;
     }
 
-    public String getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(String updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -34,8 +36,18 @@
     </thead>
     
     <tbody>
+
+    <c:forEach var="tools" items="${tools}">
+        <tr>
+            <td><img src="${pageContext.request.contextPath}/resource/images/f01.png" />${tools.name}</td>
+            <td><fmt:formatDate value="${tools.updateDate}" pattern="yyyy-MM-dd HH:mm:ss" /> </td>
+            <td>${tools.type}</td>
+            <td class="tdlast">${tools.size} KB</td>
+            <td></td>
+        </tr>
+    </c:forEach>
     
-    	<tr>
+    <%--	<tr>
         <td><img src="${pageContext.request.contextPath}/resource/images/f01.png" />Adobe Dreamweaver CS5简体中文绿色</td>
         <td>2013/10/14 17:38</td>
         <td>文件夹</td>
@@ -129,7 +141,7 @@
         <td>注册表</td>
         <td class="tdlast">100 KB</td>
         <td></td>
-        </tr>
+        </tr>--%>
     
     </tbody>
     
