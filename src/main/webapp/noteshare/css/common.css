@@ -1,0 +1,141 @@
+@charset "utf-8";
+html{
+    word-wrap: break-word;
+}
+body {
+    background-color: #fafafa;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+    width: 100%;
+    min-width: 1263px;
+    height: 30px;
+    background-color: #555;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
+}
+
+#head > .head-center {
+    width: 1263px;
+    margin: 0 auto;
+}
+
+#head > .head-center > p {
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+    letter-spacing: 1px;
+    float: left;
+}
+
+#head > .head-center nav > .nav-ul {
+    float: right;
+    height: 30px;
+    width: 350px;
+
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+#head > .head-center nav > ul > li {
+    width: 50px;
+    list-style: outside none none;
+    font-size: 12px;
+    display: inline-block;
+    color: #999;
+    float: left;
+    line-height: 30px;
+}
+
+#head > .head-center nav li.head-nav span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin-right: 3px;
+    vertical-align: middle;
+    background: url(../images/y.png) no-repeat 0px -903px;
+}
+
+#head .head-center nav li.head-nav .iconspan {
+    background: url(../images/y.png) no-repeat 0px -947px;
+}
+
+#head > .head-center nav li.head-nav {
+    width: 68px;
+    position: relative;
+}
+
+#head > .head-center nav > ul > li a:hover {
+    color: paleturquoise;
+    text-decoration: underline;
+}
+
+#head .site-nav {
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
+}
+
+#head #site-nav {
+
+    /*background: url(../img/y.png) no-repeat 0px -947px;*/
+}
+
+#head nav .nav-title {
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    background-color: red;
+    right: 0px;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .6);
+}
+
+#head .nav-title ul {
+    list-style: outside none none;
+    display: block;
+    z-index: 9999;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+
+}
+
+#head .nav-title ul li {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+#head .nav-title li h3 {
+    font-weight: inherit;
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+}
+
+#head .nav-title ul li a {
+    border-top: 1px dashed #999;
+    text-align: left;
+    display: block;
+    padding: 1.4px;
+}
+
+#head .nav-title ul li a.frist {
+    border-top: 2px solid #999999;
+}
+/*---------------------------------------以上头部区域--------------------------------------------*/
+

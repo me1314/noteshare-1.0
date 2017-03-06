@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.ToolMapper">
+    <!--添加常用工具-->
+    <insert id="upload" parameterType="Tool" >
+        insert into ns_tools values(#{id},#{name},#{updateDate},#{type},#{size},#{description},#{url},#{am_id})
+    </insert>
+    <!--查询常用工具列表-->
+    <select id="list" resultMap="Tool">
+        select * from ns_tools
+    </select>
+    <!--结果集Map映射-->
+    <resultMap id="Tool" type="Tool">
+        <result property="name" column="tl_name" />
+        <result property="updateDate" column="tl_updateDate" />
+        <result property="type" column="tl_type" />
+        <result property="size" column="tl_size" />
+        <result property="url" column="tl_url" />
+    </resultMap>
+</mapper>

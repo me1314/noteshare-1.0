@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>noteshare</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>noteshare</title>
+</head>
+
+<body>
+<!--头部-->
+<header id="head">
+    <div class="head-center">
+        <p>
+            <span>
+                hi，欢迎来到noteShare!
+            </span>
+        </p>
+        <!--<h1 class="logo">noteshare</h1>-->
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="##">登陆</a></li>
+                <li><a href="##">注册</a></li>
+                <li><a href="##">个人中心</a></li>
+                <li><a href="##">收藏夹</a></li>
+                <li><a href="##">帮助</a></li>
+                <li class="head-nav" id="site-nav"><span></span>网站导航
+                    <div class="nav-title">
+                        <ul>
+                            <li>
+                                <h3>前端</h3>
+                                <a href="#" class="frist">HTML5</a>
+                                <a href="#">CSS</a>
+                                <a href="#">JAVASCRIPT</a>
+                                <a href="#">HTML5</a>
+                            </li>
+                            <li>
+                                <h3>后台</h3>
+                                <a href="#" class="frist">JAVA</a>
+                                <a href="#">PHP</a>
+                                <a href="#">Python</a>
+                                <a href="#">C</a>
+                                <a href="#">C#</a>
+                                <a href="#">Linux</a>
+                            </li>
+                            <li>
+                                <h3>大数据</h3>
+                                <a href="#" class="frist">Hadoop</a>
+                                <a href="#">Spark</a>
+                                <a href="#">Hive</a>
+                                <a href="#">HBase</a>
+                                <a href="#">Scala</a>
+                                <a href="#">Kafka</a>
+                            </li>
+                            <li>
+                                <h3>关于</h3>
+                                <a href="#" class="frist">赞助站长</a>
+                                <a href="#">程序员书籍推荐</a>
+                                <a href="#">翻墙游览器插件</a>
+                                <a href="#">广告合作</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--logo和search-->
+<div id="sec">
+    <div class="sec-content">
+        <h1 class="logo">
+            <a href="#">NoteShare</a>
+        </h1>
+        <div class="search">
+            <form action="#" method="get">
+                <input type="search" name="noteName" autocomplete="off" placeholder="搜点什么呢..." class="sea-in"/><input
+                    type="submit" value="搜索" class="sea-btn"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--导航栏-->
+<div id="nav">
+    <div class="nav-content">
+        <ul class="con-ul">
+            <li class="active">
+                <a href="">首页</a></li>
+            <li>
+                <a href="">前端</a>
+                <div class="li-bf">
+                    <ul>
+                        <li><a href="">Html5</a></li>
+                        <li><a href="">Css</a></li>
+                        <li><a href="">JavaScript</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">语言</a>
+                <div class="li-af">
+                    <ul>
+                        <li><a href="">Java</a></li>
+                        <li><a href="">C/C++/C#</a></li>
+                        <li><a href="">Php</a></li>
+                        <li><a href="">Python</a></li>
+                    </ul>
+
+                </div>
+            </li>
+            <li>
+                <a href="">大数据</a>
+                <div class="li-bd">
+                    <ul>
+                        <li><a href="">Hadoop</a></li>
+                        <li><a href="">Spark</a></li>
+                        <li><a href="">Flink</a></li>
+                        <li><a href="">Hive</a></li>
+                        <li><a href="">HBase</a></li>
+                        <li><a href="">Flum</a></li>
+                        <li><a href="">Scala</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">移动开发</a>
+                <div class="li-yd">
+                    <ul>
+                        <li><a href="">Ios</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">微信</a></li>
+                        <li><a href="">Swift</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">程序人生</a>
+
+            </li>
+            <li style="z-index: 999;">
+                <a href="">常用工具</a>
+                <div class="li-ut">
+                    <ul>
+                        <li><a href="">二维码生成</a></li>
+                        <li><a href="">翻墙插件</a></li>
+                        <li><a href="">Json格式化工具</a></li>
+                        <li><a href="">RGB颜色参考</a></li>
+                        <li><a href="">Git安装</a></li>
+                        <li><a href="">Unicode转换器</a></li>
+                        <li><a href="">取色器</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--轮播区域-->
+<div id="lb">
+    <div class="lb-content">
+        <div class="huadong">
+            <ul class="show_images_list">
+                <li class="show_images_list_li show_images_1" style="z-index: 15; top: 1px; left: 200px;"><img
+                        class="show_images_1_img" src="images/14.jpg"
+                        alt="" title=""
+                        style="width: 569px; height: 400px;"></li>
+                <li class="show_images_list_li show_images_2" style="z-index: 10; top: 20px; left: 0px;"><img
+                        class="show_images_2_img" src="images/4.jpg"
+                        alt="" title=""
+                        style="width: 527px; height: 357px;"></li>
+                <li class="show_images_list_li show_images_3" style="z-index: 5; top: 20px; left: 459px;"><img
+                        class="show_images_3_img" src="images/2.jpg"
+                        alt="" title=""
+                        style="width: 527px; height: 357px;"></li>
+                <li class="show_images_list_li show_images_4" style="z-index: 0; top: 20px; left: 200px;"><img
+                        class="show_images_4_img" src="images/1.jpg"
+                        alt="" title=""
+                        style="width: 527px; height: 357px;"></li>
+            </ul>
+            <div class="header_text" id="belt"></div>
+        </div>
+        <div class="btn"><a class="btn1" rel="1"></a> <a class="btn2" rel="2"></a> <a class="btn3" rel="3"></a> <a
+                class="btn4" rel="4"></a></div>
+    </div>
+    <div class="hot">
+        <h3>热点资讯</h3>
+        <ul>
+            <li>
+                <a class="im" href="" target="_blank">
+                 <img src="images/1.jpg" title="" alt="" />
+                </a>
+                 <h4>
+                     <a href="" alt="" target="">
+                        讯飞开放平台，80%语音开发者的共同选择 。
+                     </a>
+                 </h4>
+
+                <p> 全球首个人工智能交互平台，全面开放业界最领先的语音识别、语音合成等10多项核心能力，目前已吸引包括QQ、高德、滴滴等在内26万合作伙伴加盟 ...</p>
+            </li>
+            <hr/>
+            <li>
+                <a class="im" href="" target="_blank">
+                    <img src="images/1.jpg" title="" alt="" />
+                </a>
+                <h4>
+                    <a href="" alt="" target="">
+                        讯飞开放平台，80%语音开发者的共同选择 。
+                    </a>
+                </h4>
+
+                <p>全球首个人工智能交互平台，全面开放业界最领先的语音识别、语音合成等10多项核心能力，目前已吸引包括QQ、高德、滴滴等在内26万合作伙伴加盟 ...</p>
+            </li>
+            <hr/>
+            <li>
+                <a class="im" href="" target="_blank">
+                    <img src="images/1.jpg" title="" alt="" />
+                </a>
+                <h4>
+                    <a href="" alt="" target="">
+                        讯飞开放平台，80%语音开发者的共同选择 。
+                    </a>
+                </h4>
+
+               <p> 全球首个人工智能交互平台，全面开放业界最领先的语音识别、语音合成等10多项核心能力，目前已吸引包括QQ、高德、滴滴等在内26万合作伙伴加盟 ...<p/>
+            </li>
+            <hr/>
+        </ul>
+
+    </div>
+</div>
+
+<!--内容区域-->
+<div id="con">
+    <div class="con-left">
+        <ul class="qd">
+            <h3>前端专题</h3>
+            <li><span>1</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>2</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>3</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>4</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>5</span><a href="">Git 常用命令速查表</a></li>
+        </ul>
+        <ul>
+            <h3>后端专题</h3>
+            <li><span>1</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>2</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>3</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>4</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>5</span><a href="">Git 常用命令速查表</a></li>
+        </ul>
+        <ul class="con-im">
+            <h3>会议</h3>
+            <li>
+                <a href="" >CSDN 2016博客之星评选公布</a>
+                <img src="images/3.jpg" alt="" />
+            </li>
+            <li>
+                <a href="" >CSDN 2016博客之星评选公布</a>
+                <img src="images/BDTC-201.jpg" alt="" />
+            </li>
+        </ul>
+        <ul>
+            <h3>大数据专题</h3>
+            <li><span>1</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>2</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>3</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>4</span><a href="">Git 常用命令速查表</a></li>
+            <li><span>5</span><a href="">Git 常用命令速查表</a></li>
+        </ul>
+        <ul class="con-blog">
+            <h3>博客推荐</h3>
+            <li><img src="images/2.jpg" alt=""/><a href="">强化学习智能Agent的开发，它底层完成了对TorchCraft和OpenAI GnAI Gym的封装ym的封装enAI Gym的封装enAI Gym的封装enAI Gym的封装</a></li>
+            <li><img src="images/2.jpg" alt=""/><a href="">强化学习智能Agent的开发，它底层完成了对TorchCraft和OpenAI GnAI Gym的封装ym的封装enAI Gym的封装enAI Gym的封装enAI Gym的封装</a></li>
+            <li><img src="images/2.jpg" alt=""/><a href="">强化学习智能Agent的开发，它底层完成了对TorchCraft和OpenAI GnAI Gym的封装ym的封装enAI Gym的封装enAI Gym的封装enAI Gym的封装</a></li>
+            <li><img src="images/2.jpg" alt=""/><a href="">强化学习智能Agent的开发，它底层完成了对TorchCraft和OpenAI GnAI Gym的封装ym的封装enAI Gym的封装enAI Gym的封装enAI Gym的封装</a></li>
+            <li><img src="images/2.jpg" alt=""/><a href="">强化学习智能Agent的开发，它底层完成了对TorchCraft和OpenAI GnAI Gym的封装ym的封装enAI Gym的封装enAI Gym的封装enAI Gym的封装</a></li>
+        </ul>
+    </div>
+    <div class="con-middle">
+        <ul>
+            <h3>文章</h3>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    <img src="images/1.jpg"/>
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    <img src="images/1.jpg"/>
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    <img src="images/1.jpg"/>
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    <img src="images/1.jpg"/>
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+            <li>
+                <h4>
+                    <a href="">CoordinatorLayout 使用全解析</a>
+                </h4>
+                <div>
+                    CoordinatorLayout遵循Material 风格，包含在 support Library中，结合AppbarLayout、CollapsingToolbarLayout等 可产生各种炫酷的效果，本篇博客就将介绍CoordinatorLayout的各种酷炫效果。
+                </div>
+            </li>
+        </ul>
+        <div id="load">
+            <a href="">查看更多动态</a>
+        </div>
+    </div>
+    <div class="con-right">
+        <ul>
+            <h3>文章详细</h3>
+            <li>
+                <h4>前端</h4>
+                <div>
+                    <ul>
+                        <li>Html5
+                            <span>13213</span></li>
+                        <li>CSS<span>13213</span></li>
+                        <li>JavaScript<span>13213</span></li>
+                    </ul>                           
+                </div>
+            </li>
+            <li>
+                <h4>语言</h4>
+                <div>
+                <ul>
+                    <li>Html5
+                    <span>13213</span>
+                    </li>
+                    <li>CSS
+                        <span>13213</span>
+                    </li>
+                    <li>JavaScript
+                        <span>13213</span>
+                    </li>
+                </ul>
+                </div>
+            </li>
+            <li> <h4>大数据</h4>
+                <div>
+                <ul>
+                    <li>Html5<span>13213</span></li>
+                    <li>CSS<span>13213</span></li>
+                    <li>JavaScript<span>13213</span></li>
+                </ul>
+                </div>
+            </li>
+            <li> <h4>移动开发</h4>
+                <div>
+                <ul>
+                    <li>Html5<span>13213</span></li>
+                    <li>CSS<span>13213</span></li>
+                    <li>JavaScript<span>13213</span></li>
+                </ul>
+                </div>
+            </li>
+            <li> <h4>程序人生</h4>
+                <div>
+                    <ul>
+                        <li>Html5<span>13213</span></li>
+                        <li>CSS<span>13213</span></li>
+                        <li>JavaScript<span>13213</span></li>
+                    </ul>
+                </div>
+            </li>
+            <li> <h4>工具</h4>
+                <div>
+                <ul>
+                    <li>Html5<span>13213</span></li>
+                    <li>CSS<span>13213</span></li>
+                    <li>JavaScript<span>13213</span></li>
+                </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/image_gallery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/image_gallery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".btn").show();
+        $(".btn  a:first").addClass("active");
+        $().gallery({
+            current: [".show_images_1", ".show_images_1_img"],
+            left: [".show_images_2", ".show_images_2_img"],
+            right: [".show_images_3", ".show_images_3_img"],
+            none: [".show_images_4", ".show_images_4_img"],
+            duration: 500,
+            start: function () {
+                $(".header_text").fadeOut(150);
+            },
+            end: function () {
+                $(".header_text").fadeIn(150);
+            },
+            autoChange: true,
+            changeTimeout: 3000,
+            stopTarget: ".header_stage"
+        });
+    });
+</script>
+</html>

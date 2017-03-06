@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/registerabout.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Title</title>
+</head>
+<body>
+<!--头部-->
+<header id="head">
+    <div class="head-center">
+        <p>
+            <span>
+                hi，欢迎来到noteShare!
+            </span>
+        </p>
+        <!--<h1 class="logo">noteshare</h1>-->
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="##">登陆</a></li>
+                <li><a href="##">注册</a></li>
+                <li><a href="##">个人中心</a></li>
+                <li><a href="##">收藏夹</a></li>
+                <li><a href="##">帮助</a></li>
+                <li class="head-nav" id="site-nav"><span></span>网站导航
+                    <div class="nav-title">
+                        <ul>
+                            <li>
+                                <h3>前端</h3>
+                                <a href="#" class="frist">HTML5</a>
+                                <a href="#">CSS</a>
+                                <a href="#">JAVASCRIPT</a>
+                                <a href="#">HTML5</a>
+                            </li>
+                            <li>
+                                <h3>后台</h3>
+                                <a href="#" class="frist">JAVA</a>
+                                <a href="#">PHP</a>
+                                <a href="#">Python</a>
+                                <a href="#">C</a>
+                                <a href="#">C#</a>
+                                <a href="#">Linux</a>
+                            </li>
+                            <li>
+                                <h3>大数据</h3>
+                                <a href="#" class="frist">Hadoop</a>
+                                <a href="#">Spark</a>
+                                <a href="#">Hive</a>
+                                <a href="#">HBase</a>
+                                <a href="#">Scala</a>
+                                <a href="#">Kafka</a>
+                            </li>
+                            <li>
+                                <h3>关于</h3>
+                                <a href="#" class="frist">赞助站长</a>
+                                <a href="#">程序员书籍推荐</a>
+                                <a href="#">翻墙游览器插件</a>
+                                <a href="#">广告合作</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="main">
+    <div class="container container-custom">
+        <div class="register-progress clearfix hidden-xs hidden-sm">
+            <div class="pross pross-ok"><span class="index">1</span>验证手机号
+                <div class="pross-dir pross-dir-bg"><span class="outside"></span><span class="inside"></span></div>
+            </div>
+            <div class="pross pross-ok"><span class="index">2</span>填写用户名及密码
+                <div class="pross-dir"><span class="outside"></span><span class="inside"></span></div>
+            </div>
+            <div class="pross"><span class="index">3</span>注册成功
+            </div>
+        </div>
+        <div class="register-info">
+            <h3><span class="icon"></span></h3>
+            <div class="user-info">
+                <form method="post" id="fm1" name="userform" action="/account/mobileregister?action=saveMobileUser">
+                    <span class="err" style="font-size:14px;color:red;"></span>
+                    <ul>
+                        <li><span>用户名：</span>
+                            <input id="username" name="username" tabindex="1" class="user-name error" value="">
+                        </li>
+                        <li><span>登录密码：</span>
+                            <input type="password" name="password" tabindex="2" class="password main-password" value="">
+                        </li>
+                        <li><span>再次输入：</span>
+                            <input type="password" tabindex="3" class="password password-agin" name="confirmpassword" id="confirmpassword" value="">
+                        </li>
+                        <li><input type="hidden" name="mobile" value="17602121846"></li>
+                        <li class="next-btn">
+                            <span></span>
+                            <input class="next-step" value="下一步" tabindex="4" type="button">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="tooltip" class="tooltip-info"><span class="icon-border"></span><span class="icon-bg"></span><span class="strength"><em class="level">低</em><span></span><span></span><span></span></span><span class="state"></span><span class="mess"></span></div>
+            <!--<div id="tooltip" class="tooltip-info error" style="left: 885.563px; top: 128px;"><span class="icon-border"></span><span class="icon-bg"></span><span class="strength"><em class="level">低</em><span></span><span></span><span></span></span><span class="state"></span><span class="mess">该用户名已经被注册!</span></div></div>-->
+    </div>
+</div>
+</body>
+</html>

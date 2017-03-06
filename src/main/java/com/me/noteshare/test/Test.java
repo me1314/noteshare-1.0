@@ -5,5 +5,5 @@ package com.me.noteshare.test;
  * Date 2017/2/27
  * Time 14:30
  */
-public class test {
+public class Test {
 }

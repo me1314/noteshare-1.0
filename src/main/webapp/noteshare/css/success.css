@@ -1,0 +1,89 @@
+.sprite-icons {
+}
+body {
+    background: #fff;
+}
+.register-success {
+    background: #fff;
+    text-align: center;
+    padding-top: 128px;
+}
+.register-success div {
+    background: #fff;
+}
+.register-success .content {
+    text-align: center;
+}
+.register-success .content h2 {
+    font-family: 'Microsoft YaHei';
+    font-weight: normal;
+    font-size: 1.833em;
+    line-height: 0;
+    color: #666;
+}
+.register-success .content .user {
+    background: url("../images/bg_icons.png") no-repeat -206px 1px;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.register-success .content .describe {
+    line-height: 25px;
+    margin: 32px auto;
+    font-size: 13px;
+    text-align: left;
+    width: 474px;
+}
+.register-success .content .service {
+    margin-top: 140px;
+    font-family: 'Microsoft YaHei';
+}
+.register-success .content .service .blog,
+.register-success .content .service .bbs,
+.register-success .content .service .download,
+.register-success .content .service .code,
+.register-success .content .service .csto,
+.register-success .content .service .club,
+.register-success .content .service .ask,
+.register-success .content .service .job,
+.register-success .content .service .college {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    width: 58px;
+    height: 58px;
+    line-height: 142px;
+}
+.register-success .content .service .blog {
+    background-position: -5px -141px;
+}
+.register-success .content .service .bbs {
+    background-position: -5px -73px;
+}
+.register-success .content .service .download {
+    background-position: -5px -549px;
+}
+.register-success .content .service .code {
+    background-position: -5px -277px;
+}
+.register-success .content .service .csto {
+    background-position: -5px -413px;
+}
+.register-success .content .service .club {
+    background-position: -5px -209px;
+}
+.register-success .content .service .ask {
+    background-position: -5px -5px;
+}
+.register-success .content .service .job {
+    background-position: -5px -617px;
+}
+.register-success .content .service .college {
+    background-position: -5px -345px;
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/login.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <title>Title</title>
+</head>
+<body>
+<!--头部-->
+<header id="head">
+    <div class="head-center">
+        <p>
+            <span>
+                hi，欢迎来到noteShare!
+            </span>
+        </p>
+        <!--<h1 class="logo">noteshare</h1>-->
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="##">登陆</a></li>
+                <li><a href="##">注册</a></li>
+                <li><a href="##">个人中心</a></li>
+                <li><a href="##">收藏夹</a></li>
+                <li><a href="##">帮助</a></li>
+                <li class="head-nav" id="site-nav"><span></span>网站导航
+                    <div class="nav-title">
+                        <ul>
+                            <li>
+                                <h3>前端</h3>
+                                <a href="#" class="frist">HTML5</a>
+                                <a href="#">CSS</a>
+                                <a href="#">JAVASCRIPT</a>
+                                <a href="#">HTML5</a>
+                            </li>
+                            <li>
+                                <h3>后台</h3>
+                                <a href="#" class="frist">JAVA</a>
+                                <a href="#">PHP</a>
+                                <a href="#">Python</a>
+                                <a href="#">C</a>
+                                <a href="#">C#</a>
+                                <a href="#">Linux</a>
+                            </li>
+                            <li>
+                                <h3>大数据</h3>
+                                <a href="#" class="frist">Hadoop</a>
+                                <a href="#">Spark</a>
+                                <a href="#">Hive</a>
+                                <a href="#">HBase</a>
+                                <a href="#">Scala</a>
+                                <a href="#">Kafka</a>
+                            </li>
+                            <li>
+                                <h3>关于</h3>
+                                <a href="#" class="frist">赞助站长</a>
+                                <a href="#">程序员书籍推荐</a>
+                                <a href="#">翻墙游览器插件</a>
+                                <a href="#">广告合作</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="main">
+    <div class="container container-custom">
+        <div class="row wrap-login">
+            <div class="login-banner"><a
+                    href="" target="_blank"><img
+                    src="images/login-banner.png" class="img-responsive"></a></div>
+            <div class="login-user ">
+                <div class="login-part">
+                    <h3>帐号登录</h3>
+                    <div class="user-info">
+                        <div class="user-pass">
+
+                            <form id="fm1" action="" method="post">
+
+                                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号"
+                                       class="user-name" type="text" value="">
+
+                                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word"
+                                       type="password" value="" autocomplete="off">
+
+
+                                <div class="error-mess" style="display:none;">
+                                    <span class="error-icon"></span><span id="error-message"></span>
+                                </div>
+
+
+                                <div class="row forget-password">
+                    	<span class="">
+                        	<input type="checkbox" name="rememberMe" id="rememberMe" value="true" class="auto-login"
+                                   tabindex="4">
+                        	<label for="rememberMe">下次自动登录</label>
+                        </span>
+                                    <span class="forever"
+                                          data-mod="popu_26">
+                        	<a href=""
+                               tabindex="5">忘记密码</a>
+                        </span>
+                                </div>
+                                <input class="logging" accesskey="l" value="登 录" tabindex="6" type="button">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="third-part tracking-ad" data-mod="popu_27">
+                        <span><font color="red">  </font></span>
+                        <i href="javascript:;"class="sina"></i>
+                        <i id="linkedinAuthorizationUrl"
+                           href="javascript:;"class="linkin"></i>
+                        <i id="baiduAuthorizationUrl"
+                           href="javascript:;" class="baidu"></i>
+                        <i id="qqAuthorizationUrl"
+                           href="javascript:;" class="qq"></i>
+                        <i id="githubAuthorizationUrl"
+                           href="javascript:;"class="github"></i>
+
+                        <i id="wechatAuthorizationUrl" href="javascript:void(0)" onclick="show();" class="wechat"
+                           target="_parent"></i>
+                        <div class="register-now"><span>还没有NoteShare帐号？</span>
+                            <span class="register tracking-ad" data-mod="popu_28">
+	                	<a href="">立即注册</a>
+	                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</html>

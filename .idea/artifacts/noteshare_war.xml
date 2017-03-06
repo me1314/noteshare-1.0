@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="noteshare:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="noteshare.war">
+      <element id="artifact" artifact-name="noteshare:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -147,7 +147,6 @@ public class OperateController {
         return "redirect:/admin/right";
     }
 
-
 }
 
 
