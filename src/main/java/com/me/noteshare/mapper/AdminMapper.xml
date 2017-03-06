@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.AdminMapper">
+    <resultMap id="AdminResultMap" type="Admin">
+        <id column="am_id" property="id" />
+        <result column="am_name" property="name" />
+        <result column="am_password" property="password" />
+        <result column="is_active" property="is_active" />
+    </resultMap>
+    <select id="get" parameterType="admin" resultMap="AdminResultMap">
+        select * from ns_admin
+            <where>
+               is_active=1 and am_name=#{name} and am_password=#{password}
+            </where>
+    </select>
+
+    <update id="updateLastTime" parameterType="admin">
+        update ns_admin set last_time = #{last_time} where is_active=1 AND am_id=#{id}
+    </update>
+</mapper>

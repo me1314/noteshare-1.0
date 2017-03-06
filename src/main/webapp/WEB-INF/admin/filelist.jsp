@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <title>无标题文档</title>
 <link href="${pageContext.request.contextPath}/resource/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath}/resource/css/select.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/jquery.js"></script>
 
 </head>
@@ -19,8 +20,12 @@
     <li><a href="#">列表</a></li>
     </ul>
     </div>
-    
-    
+
+    <ul class="toolbar">
+        <li class="addTab"><a href="/admin/fileupload"><span><img
+                src="${pageContext.request.contextPath}/resource/images/t01.png"/></span>添加</a>
+        </li>
+    </ul>
     <table class="filetable">
     
     <thead>
@@ -143,5 +148,18 @@
    
 
 </body>
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (e) {
+        $(".select1").uedSelect({
+            width: 345
+        });
+        $(".select2").uedSelect({
+            width: 167
+        });
+        $(".select3").uedSelect({
+            width: 100
+        });
+    });
+</script>
 </html>

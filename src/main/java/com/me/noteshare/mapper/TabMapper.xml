@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.TabMapper">
+
+    <resultMap id="TabResultMap" type="Tab">
+        <id column="tab_id" property="id" />
+        <result column="tab_name" property="tabname" />
+        <collection property="childTabs" ofType="ChildTab">
+            <id column="ctab_id" property="id" />
+            <result column="ctab_name" property="ctabname" />
+            <result column="ctab_iconurl" property="iconurl" />
+        </collection>
+    </resultMap>
+
+    <resultMap id="CtabResultMap" type="ChildTab">
+        <id column="ctab_id" property="id" />
+        <result column="ctab_name" property="ctabname" />
+        <result column="ctab_iconurl" property="iconurl" />
+        <association property="tab" javaType="Tab">
+            <id column="tab_id" property="id" />
+            <result column="tab_name" property="tabname" />
+        </association>
+    </resultMap>
+    <select id="listTab" resultMap="TabResultMap">
+        select * from ns_tab
+    </select>
+    <select id="listCtabById" parameterType="Integer" resultMap="CtabResultMap">
+        select * from ns_ctab c
+            <where>
+                c.tab_id=#{id}
+            </where>
+    </select>
+    <select id="addCtab" parameterType="ChildTab" >
+        insert into ns_ctab(ctab_name,tab_id,ctab_iconurl)
+        VALUES(#{ctabname},#{tab.id},#{iconurl})
+    </select>
+    <select id="listCtab" resultMap="CtabResultMap">
+        select c.*,t.* from ns_ctab c ,ns_tab t
+        <where>
+            c.tab_id = t.tab_id
+        </where>
+    </select>
+    <select id="getCtab" parameterType="Integer" resultMap="CtabResultMap">
+        select c.*,t.* from ns_ctab c,ns_tab t
+        <where>
+            ctab_id = #{id} and c.tab_id = t.tab_id
+        </where>
+    </select>
+    <update id="updateCtab" parameterType="ChildTab">
+        update ns_ctab set ctab_name=#{ctabname} ,tab_id=${tab.id} where ctab_id = ${id}
+    </update>
+    <delete id="deleteCtab" parameterType="ChildTab" >
+        delete from ns_ctab where ctab_id = ${id}
+    </delete>
+</mapper>

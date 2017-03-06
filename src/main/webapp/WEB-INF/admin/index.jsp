@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <html>
 <head>
 <meta charset="utf-8" />
@@ -23,13 +26,13 @@
     
     <div class="welinfo">
     <span><img src="${pageContext.request.contextPath}/resource/images/sun.png" alt="天气" /></span>
-    <b>Admin早上好，欢迎登录noteshare管理界面</b>
+    <b>您好<i style="color: #5AC3AC;">${sessionScope.admin.name}</i>，欢迎登录noteshare管理界面</b>
     <a href="#">帐号设置</a>
     </div>
     
     <div class="welinfo">
     <span><img src="${pageContext.request.contextPath}/resource/images/time.png" alt="时间" /></span>
-    <i>您上次登录的时间：2013-10-09 15:22</i> （不是您登录的？<a href="#">请点这里</a>）
+    <i>您上次登录的时间：<f:formatDate value="${sessionScope.admin.last_time}" pattern="yyyy-MM-dd HH:mm:ss" /> </i> （不是您登录的？<a href="#">请点这里</a>）
     </div>
     
     <div class="xline"></div>

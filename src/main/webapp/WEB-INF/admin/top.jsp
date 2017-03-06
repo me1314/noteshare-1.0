@@ -37,11 +37,11 @@ $(function(){
     <ul>
     <li><span><img src="${pageContext.request.contextPath}/resource/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
-    <li><a href="login.jsp" target="_parent">退出</a></li>
+    <li><a href="/admin/loginout" target="_parent">退出</a></li>
     </ul>
      
     <div class="user">
-    <span>admin</span>
+    <span>${sessionScope.admin.name}</span>
     <i>消息</i>
     <b>5</b>
     </div>    

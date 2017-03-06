@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.me.noteshare.mapper.NoteMapper">
+    <insert id="save" parameterType="Note">
+        insert into ns_note(nt_no,nt_title,nt_time,am_id,nt_refurl,nt_url,ctab_id)
+        values(#{no},#{title},#{time},#{admin.id},#{refurl},#{url},#{ctab.id})
+    </insert>
+
+    <resultMap id="noteResultMap" type="Note">
+        <id property="id" column="id" />
+        <result property="no" column="nt_no" />
+        <result property="title" column="nt_title" />
+        <result property="time" column="nt_time" />
+        <result property="refurl" column="nt_refurl" />
+        <result property="url" column="nt_url" />
+        <association property="admin" javaType="Admin" >
+            <id property="id" column="am_id"/>
+            <result property="name" column="am_name" />
+            <result property="password" column="am_password" />
+            <result property="is_active" column="is_active" />
+            <result property="last_time" column="last_time" />
+        </association>
+        <association property="ctab" javaType="ChildTab">
+            <id  property="id" column="ctab_id"/>
+            <result property="ctabname" column="ctab_name" />
+            <result property="iconurl" column="ctab_iconurl"/>
+            <association property="tab" javaType="Tab">
+                <id column="tab_id" property="id" />
+                <result column="tab_name" property="tabname" />
+            </association>
+        </association>
+    </resultMap>
+    <select id="listNote"  parameterType="PageQuery" resultMap="noteResultMap">
+        select n.*,c.*,a.*,t.* from ns_note n,ns_admin a,ns_ctab c,ns_tab t where n.am_id = a.am_id and n.ctab_id = c.ctab_id and c.tab_id = t.tab_id limit #{PageQuery_start},#{PageQuery_pageSize}
+    </select>
+
+    <select id="count" resultType="Integer">
+        select count(*) from ns_note n,ns_admin a,ns_ctab c where n.am_id = a.am_id and n.ctab_id = c.ctab_id
+    </select>
+    <update id="noteupdate" parameterType="Note">
+        update ns_note set nt_title = #{title} ,nt_refurl = #{refurl},ctab_id = #{ctab.id} where id=#{id}
+    </update>
+    <select id="getNote" parameterType="Integer" resultMap="noteResultMap">
+        SELECT n.*,c.*,a.* from ns_note n ,ns_admin a,ns_ctab c where n.am_id = a.am_id and n.ctab_id = c.ctab_id and n.id = #{id}
+</select>
+    <delete id="removeNote" parameterType="Integer">
+        delete from ns_note where id=#{id}
+    </delete>
+</mapper>

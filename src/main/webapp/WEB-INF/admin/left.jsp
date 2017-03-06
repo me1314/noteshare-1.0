@@ -41,7 +41,7 @@ $(function(){
     	<ul class="menuson">
         <li class="active"><cite></cite><a href="/admin/index" target="rightFrame">首页</a><i></i></li>
         <li ><cite></cite><a href="/admin/right" target="rightFrame">文章列表</a><i></i></li>
-        <li><cite></cite><a href="/admin/form" target="rightFrame">添加编辑</a><i></i></li>
+        <li><cite></cite><a href="/admin/fileupload" target="rightFrame">添加编辑</a><i></i></li>
         <li><cite></cite><a href="/admin/imglist" target="rightFrame">标签管理</a><i></i></li>
         <li><cite></cite><a href="/admin/imglist1" target="rightFrame">首推管理</a><i></i></li>
         <li><cite></cite><a href="/admin/filelist" target="rightFrame">工具目录</a><i></i></li>
